@@ -4,9 +4,9 @@ LABEL maintainer "gecko-developer@oxide.one"
 
 RUN apk --no-cache add dnsmasq
 
-RUN mkdir /config /tftp
+RUN mkdir /config /tftp /data
 
-VOLUME /config /tftp
+VOLUME /config /tftp /data
 
 COPY ./init.sh      /usr/bin
 

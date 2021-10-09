@@ -15,7 +15,7 @@ fi
 dnsmasq --test
 
 # Launch dnsmasq
-dnsmasq -d --log-dhcp --log-debug -7 /config &
+dnsmasq -d --log-dhcp --log-debug -7 /config --dhcp-leasefile /data/dnsmasq.lease &
 
 # Trap Sigterm n stuff
 trap "trap - SIGTERM && kill -- -$$" SIGINT SIGTERM EXIT
