@@ -10,6 +10,9 @@ then
   cp /etc/dnsmasq.conf /config
 fi
 
+cp /usr/share/syslinux/efi64/syslinux.efi /tftp
+cp /usr/share/syslinux/efi64/ldlinux.e64 /tftp
+cp /usr/share/syslinux/lpxelinux.0 /tftp
 
 # Check the syntax of dnsmasq
 dnsmasq --test

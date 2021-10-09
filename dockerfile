@@ -4,13 +4,11 @@ LABEL maintainer "gecko-developer@oxide.one"
 
 RUN apk --no-cache add dnsmasq syslinux
 
-RUN mkdir -p /config /tftp/boot /tftp/config /data
+RUN mkdir -p /config /tftp /data
 
-VOLUME /config /tftp/config /data
+VOLUME /config /tftp /data
 
-COPY ./init.sh      /usr/bin
-
-RUN cp /usr/share/syslinux/lpxelinux.0 /usr/share/syslinux/efi64/syslinux.efi /tftp/boot
+COPY ./init.sh  /usr/bin
 
 # DNS
 EXPOSE 53 53/udp
