@@ -11,9 +11,4 @@ cp /usr/share/syslinux/lpxelinux.0
 dnsmasq --test
 
 # Launch dnsmasq
-dnsmasq -d &
-
-# Trap Sigterm n stuff
-trap "trap - SIGTERM && kill -- -$$" SIGINT SIGTERM EXIT
-
-wait
+dnsmasq -d
