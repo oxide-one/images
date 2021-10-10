@@ -3,16 +3,9 @@
 # Exit on failure
 set -e
 
-# Check for files in directory
-if [ -n "$(find /config -prune -empty 2>/dev/null)" ]
-then
-  echo "No files found in /config! Using default dnsmasq"
-  cp /etc/dnsmasq.conf /config
-fi
-
-cp /usr/share/syslinux/efi64/syslinux.efi /tftp
-cp /usr/share/syslinux/efi64/ldlinux.e64 /tftp
-cp /usr/share/syslinux/lpxelinux.0 /tftp
+cp /usr/share/syslinux/efi64/syslinux.efi
+cp /usr/share/syslinux/efi64/ldlinux.e64
+cp /usr/share/syslinux/lpxelinux.0
 
 # Check the syntax of dnsmasq
 dnsmasq --test

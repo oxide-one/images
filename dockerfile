@@ -4,10 +4,6 @@ LABEL maintainer "gecko-developer@oxide.one"
 
 RUN apk --no-cache add dnsmasq syslinux
 
-RUN mkdir -p /config /tftp /data
-
-VOLUME /config /tftp /data
-
 COPY ./init.sh  /usr/bin
 
 # DNS
