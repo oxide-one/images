@@ -7,4 +7,4 @@ set -e
 dnsmasq --test
 
 # Launch dnsmasq
-dnsmasq -d
+dnsmasq -d $@
