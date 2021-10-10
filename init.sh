@@ -18,7 +18,7 @@ cp /usr/share/syslinux/lpxelinux.0 /tftp
 dnsmasq --test
 
 # Launch dnsmasq
-dnsmasq -d --log-dhcp --log-debug -7 /config -l /data/dnsmasq.lease &
+dnsmasq -d &
 
 # Trap Sigterm n stuff
 trap "trap - SIGTERM && kill -- -$$" SIGINT SIGTERM EXIT
