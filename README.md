@@ -15,4 +15,10 @@ Feel free to base your images off of this one, and file any issues if things don
 
 # Quick Start
 
-`docker run --name dnsmasq --cap-add NET_ADMIN -v $(pwd)/dnsmasq.conf:/etc/dnsmasq.conf ghcr.io/oxide-one/dnsmasq:main`
+```bash
+docker run \\ 
+  --name dnsmasq \\
+  --cap-add NET_ADMIN \\
+  -v $(pwd)/dnsmasq.conf:/etc/dnsmasq.conf \\
+  ghcr.io/oxide-one/dnsmasq:main
+```
