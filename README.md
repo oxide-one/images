@@ -22,3 +22,11 @@ docker run \\
   -v $(pwd)/dnsmasq.conf:/etc/dnsmasq.conf \\
   ghcr.io/oxide-one/dnsmasq:main
 ```
+
+## Extra Info
+
+If you want to PXE boot from this, you can set the TFTP root to `/usr/share/syslinux`
+
+```
+tftp-root=/usr/share/syslinux
+```
