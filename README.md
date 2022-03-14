@@ -25,8 +25,10 @@ docker run \\
 
 ## Extra Info
 
-If you want to PXE boot from this, you can set the TFTP root to `/usr/share/syslinux`
+If you want to PXE boot from this, you can set the TFTP root to `/var/lib/tftproot`
+
+There are x86_64, i386 and aarch64 (amd64) binaries provided :)
 
 ```
-tftp-root=/usr/share/syslinux
+tftp-root=/var/lib/tftproot
 ```
