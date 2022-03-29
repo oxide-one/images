@@ -1,0 +1,10 @@
+builds:
+- id: coredns
+  dir: coredns  # default is .
+  main: .
+  env:
+  - CGO_ENABLED=0
+  flags:
+  - -v
+  ldflags:
+  - -s -w
