@@ -119,4 +119,4 @@ jobs:
         working-directory: "coredns"
         env:
           auth_token: ${{ secrets.GITHUB_TOKEN }}
-          username: ${{ GITHUB_ACTOR }}
+          username: ${{ env.GITHUB_ACTOR }}
