@@ -115,7 +115,7 @@ jobs:
       - name: "Build CoreDNS"
         run: |
           echo "${{ github.token }}" | ko login ghcr.io --username "dummy" --password-stdin
-          ko build . --platform=all
+          ko build . --platform=all -B
         working-directory: "coredns"
         env:
           auth_token: ${{ secrets.GITHUB_TOKEN }}
