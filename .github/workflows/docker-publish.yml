@@ -96,7 +96,7 @@ jobs:
       - name: "Setup Ko"
         uses: imjasonh/setup-ko@v0.4
         env:
-            KO_DOCKER_REPO: ${{ env.REGISTRY }}/oxide-one/coredns
+            KO_DOCKER_REPO: ${{ env.REGISTRY }}/oxide-one
 
       - name: "Merge the plugins files"
         run: "cat plugin.cfg >> coredns/plugin.cfg"
