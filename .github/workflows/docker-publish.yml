@@ -113,5 +113,10 @@ jobs:
         working-directory: "coredns"
 
       - name: "Build CoreDNS"
-        run: "ko build coredns.go --platform=all"
+        run: |
+          echo "${auth_token}" | ko login https://ghcr.io --username "${username}" --password-stdin
+          ko build . --platform=all
         working-directory: "coredns"
+        env:
+          auth_token: ${{ secrets.GITHUB_TOKEN }}
+          username: ${{ GITHUB_ACTOR }}
