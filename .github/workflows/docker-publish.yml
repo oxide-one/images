@@ -87,6 +87,7 @@ jobs:
         with:
           repository: 'coredns/coredns'
           ref: v1.9.1
+          path: 'coredns'
 
       - name: "Setup Ko"
         uses: imjasonh/setup-ko@v0.4
