@@ -100,7 +100,10 @@ jobs:
 
       - name: "Merge the plugins files"
         run: "cat plugin.cfg >> coredns/plugin.cfg"
-      
+
+      # - name: "Copy .ko.yaml over"
+      #   run: "cp .ko.yaml coredns"
+
       - name: "Generate coredns.go"
         run: "go generate coredns.go"
         working-directory: "coredns"
@@ -110,5 +113,5 @@ jobs:
         working-directory: "coredns"
 
       - name: "Build CoreDNS"
-        run: "ko build . --platform=all"
-      
+        run: "ko build coredns.go --platform=all"
+        working-directory: "coredns"
