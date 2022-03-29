@@ -114,7 +114,7 @@ jobs:
 
       - name: "Build CoreDNS"
         run: |
-          echo "${auth_token}" | ko login https://ghcr.io --username "${username}" --password-stdin
+          echo "${auth_token}" | ko login ghcr.io --username "${username}" --password-stdin
           ko build . --platform=all
         working-directory: "coredns"
         env:
