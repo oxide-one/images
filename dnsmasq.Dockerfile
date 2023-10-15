@@ -1,4 +1,4 @@
-FROM ubuntu:21.10 AS build
+FROM ubuntu:impish-20220531 AS build
 
 # Download dependencies
 RUN dpkg --add-architecture i386
