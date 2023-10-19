@@ -28,7 +28,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # Login against a Docker registry except on PR
       # https://github.com/docker/login-action
@@ -80,10 +80,10 @@ jobs:
 
     steps:
       - name: Checkout This repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Checkout CoreDNS
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: 'coredns/coredns'
           ref: v1.9.1
