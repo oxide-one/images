@@ -40,7 +40,7 @@ RUN cp src/bin/undionly.kpxe src/bin-i386-efi/ipxe.efi /output/i386
 RUN mkdir -p /output/aarch64
 RUN cp src/bin-arm64-efi/ipxe.efi /output/aarch64
 
-FROM alpine:3.16
+FROM alpine:3.20
 LABEL maintainer "gecko-developer@oxide.one"
 RUN apk --no-cache add dnsmasq
 COPY --from=build  /output /var/lib/tftproot
